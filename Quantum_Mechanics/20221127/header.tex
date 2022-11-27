@@ -1,0 +1,144 @@
+%\usepackage{ctex}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\DeclareMathOperator\arcsinh{arcsinh}
+\usepackage{amssymb}
+
+
+\usepackage{amsthm}%%这个宏包定义了如何构建不同风格的定理环境
+%%一般的模式：先用\newtheoremstyle去定义一个风格，然后调用这个\theoremstyle，下方定义一些\newtheorem属于这个风格。
+%%官方的宏包写的很清楚
+\newtheoremstyle{mystyle}
+{2ex}% above space
+{2ex}% below space
+{}% body font
+{}% indent amount
+{\bfseries}% head font
+{.}% post head punctuation
+{ }% post head punctuation
+{}% head spec
+
+\theoremstyle{mystyle}
+\newtheorem{tuilun}{Corollary}
+\newtheorem{dingyi}{Definition}
+\newtheorem{lizi}{Example}
+\newtheorem{lianxi}{Exercise}
+\newtheorem{yinli}{Lemma}
+\newtheorem{jihao}{Notation}
+\newtheorem{yueding}{Convention}
+\newtheorem{mingti}{Proposition}
+\newtheorem{dingli}{Theorem}
+\newtheorem{caogao}{Scratch}
+\newtheorem{pinglun}{Remark}
+
+
+
+\renewenvironment{proof}{{\bf\noindent Proof: }}{\hfill $\blacksquare$\par}
+
+\newenvironment{jie}{{\bf\noindent Solution: }}{\hfill $\blacksquare$\par}
+
+
+\newcommand{\zsqj}[1]{\llbracket #1 \rrbracket}%整数区间
+\newcommand{\piandao}[2]{\frac{\partial #1}{\partial #2}}%偏导
+\newcommand{\fengshu}[2]{\frac{#1}{#2}}%分数
+\newcommand{\ybds}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}%一般导数
+\newcommand{\dwf}{\mathrm{d}}%d微分
+%常见集合符号
+\newcommand{\Cc}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\Nn}{\mathbb{N^{*}}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\rw}[1]{\shadowsize=8pt
+	\shadowbox{\parbox{\textwidth}{Review: #1}}}%加框
+\newcommand{\jk}[1]{\shadowsize=8pt
+	\shadowbox{\parbox{\textwidth}{#1}}}%加框
+
+%括号
+\newcommand{\bket}[1]{\left\lvert #1\right\rangle}
+\newcommand{\brak}[1]{\left\langle #1 \right\rvert}
+\newcommand{\braket}[2]{\left\langle #1\middle\vert #2 \right\rangle}
+\newcommand{\bra}{\langle}
+\newcommand{\ket}{\rangle}
+
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{soul}
+\usepackage{color, xcolor}
+\usepackage{enumitem}
+\usepackage{esint}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{mathdots}
+\usepackage{mathtools}
+\usepackage{mathrsfs}
+\usepackage{marginnote}
+\usepackage{microtype}
+\usepackage[version=4]{mhchem}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\usepackage{pgfplots}
+\usepackage{siunitx}
+\usepackage{slashed}
+\usepackage{stmaryrd}
+\usepackage{subfig}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage{textcomp}
+\usepackage{tikz}
+\usepackage{tkz-euclide}
+\usepackage{cancel}
+\usepackage{wrapfig}
+\usepackage[normalem]{ulem}
+\usepackage[all]{xy}
+\usepackage{cmbright}%我觉得顺眼的字体
+\usepackage{fancybox}%做各种形式的盒子
+\usepackage{imakeidx}%做索引
+\makeindex
+\usepackage[
+a5paper,
+rmargin=10pt,lmargin=10pt,
+tmargin=0pt,bmargin=10pt,
+]{geometry}
+
+\usepackage[hidelinks,
+pdfauthor={Philippe MENG},
+pdfsubject={Notes: \ncourse\ -\ \myedition},
+pdftitle={\ncourse\ -\ \myedition},
+pdfkeywords={\ndates\ \nyear\ \ncourse}]{hyperref}
+\title{\ncourse \\ {\small Edition: \myedition}}
+\pgfplotsset{compat=1.12}
+\pagestyle{plain}%原本为fancyplain，会有页眉
+%\lhead{\emph{\nouppercase{\leftmark}}}
+%\rhead{\ifnum\thepage=1\else\ncourse\fi}
+
+%标题样式设置
+\usepackage{titlesec}
+\titleformat{\chapter}[block]{\LARGE\bfseries}{Chapter \arabic{chapter}}{1em}{}[]
+\titlespacing{\chapter}{0pt}{-2pt}{2pt}
+
+
+%插入pdf_tex
+\usepackage{transparent}
+\usepackage{import}
+\newcommand{\dizhi}{C:/Users/10109/Desktop/Notes}%注意Windows下地址正常用\隔开，但在tex中要换成/
+\newcommand{\includesvg}[3]{%
+	\def\svgwidth{#1}%
+	\import{\dizhi/#2/}{#3.pdf_tex}%
+}
+
+\newcounter{handout}[section]
+\newcommand{\ho}[1]{\addtocounter{handout}{1}\href{\dizhi/#1}{Handout \thehandout.}}
+
+\newcounter{trash}[section]
+\newcommand{\rtd}{\addtocounter{trash}{1}{{\color{red}{Rest to be done}} \thetrash !!!}}
+
+\newcommand{\kh}{\vspace{20pt}}
+\newcommand{\yd}{$\circ$}

@@ -1,0 +1,52 @@
+\section{The Language of set theory}
+
+Prove that: The direct image mapping $f:\mathcal{P}(X)\longrightarrow \mathcal{P}(Y)$ commutes with unions, but in general not with intersections or complements.
+
+The Cartesian product is $\prod_{\alpha\in A}X_{\alpha}$ is a set of maps. But these maps are from $A$ to a big set $\cup_{\alpha\in A}X_{\alpha}$. Despite the enormorous choices, we are limited to the case where the element of the index family must to mapped to the set it labels, which, on the other hand, can justify the domain of the maps.
+
+Justify why the previous definition of $X_1\times X_2$ is set-theoretically different from the present definition of $\prod_{1}^{2}X_j$. For example, an element of $\prod_{1}^{2}X_j$ is a mapping $f:A={1,2}\longrightarrow X_1\cup X_2$ which satisfies $f(1)\in X_1,f(2)\in X_2$ and so $(f(1),f(2))\in X_1\times X_2$. Since there is a one-to-one correspondence between $f$ and $(f(1),f(2))$(Justification?), we have the equivalence of these definitions.
+
+The projection or coordinate map $\pi_{\alpha}$ is actually a map which send a map to an element. Since the map is an element of the Cartesain product, we can achieve the element of any set being indexed.
+
+The reason why use $Y^A$ to denote the set of all mappings from $A$ to $Y$? It's a special case of the Cartesian product. 
+
+\section{Ordering}
+Why maximal elements need not be unique unless the ordering is linear?
+
+Why unless $E$ is linearly ordered, a maximal element of $E$ neeed not be an upper bound for $E$?
+
+Prove that an upper bound for the maximal linearly ordered subset of $X$ is a maximal element of $X$.
+
+\noindent If $a\in X$ is an upper bound for the maximal linearly ordered subset $E$ and which is not a maximal element of $X$. Then there exists a $y\in X$ satisfying $a\le y$. So we have $E\cup \left\{y\right\}$ is a linearly ordered subset(since any $x\in E,x\le a\le y$), and absurde with the fact that $E$ is the maximal linearly ordered subset.
+
+Verify that the hypotheses of Zorn's lemma are satisfied so that $\mathcal{W}$ has a maximal element. We need to establish a partially ordering between elements of $\mathcal{W}$. My first idea is the inclusion of sets. Then we need to establish the linearly ordered subset of $\mathcal{W}$, which is a collection of linearly ordered subset of $X$ and with inclusion relation between each other. And I need to find an upper bound for this linearly ordered subset of $\mathcal{W}$. ($X$ is not a such candiat, since $X$ does not necessarily belongs to $\mathcal{W}$). Stop! A natural but subtle question must be realized: 
+
+\kh
+\noindent {\color{red}Can we always have two linearly ordered subset of $X$ with inclusion relation?}
+\kh
+
+If not, $\mathcal{W}$ is not even partially ordered. So we must have at least one pair of $(E_1,\le_1)$ and $(E_2,\le_2)$ with $E_1\subset E_2$. We can give an example as follows: we redefine $\le_2$ to make it compatible with $\le_1$. But that's not relevant, what I ask is what if any well-ordered subset of $X$ does not have inclusion relationship with each other? Not possible! We can always find a subset of $E_2$, for example, to be $E_1$ and on $E_1$, $\le_2$ agrees with $\le_1$.
+
+Another question: 
+
+\kh 
+\noindent {\color{red} 
+How can we find an upper bound for every collection of well-ordered subset of $X$ with inclusion relationship? Or, does it always exist?
+}
+\kh
+
+For this collection, we find the maximum ...
+
+We go back to note that $\mathcal{W}$ is the collection of well ordered subset of $X$, which has a stronger restriction than linearly ordered. So the earlier question should be said:
+
+\kh
+\noindent {\color{red}Can we always have two well-ordered subset of $X$ with inclusion relation?}
+\kh
+
+If we do not have any well-ordered subset of $X$ with inclusion relation. We achieve this by constructing a new well-ordering continuously. For example, if $E_1$ is a well-ordered subset of $X$, then I make $E_2\supset E_1$ to be a new well-ordered subset in the following way: I can bring $x_0\in X\backslash E_1$ and say $E_2=E_1\cup\left\{x_0\right\}$ with $\le_2$ agrees with $\le_1$ on $E_1$ and $y\le x_0$ for all $y\in E_1$, then $\le_2$ is a well-ordering on $E_2$ and $E_1\subset E_2$. And even for the case when we do have $E_1\subset E_2$ with an independent $\le_2$ on $E_2$, we can always make a new $\le_2$ on $E_2$ to be compatible with $\le_1$ on $E_1$.
+
+Next, we are going to solve the another question mentioned abouve, that is to find an upper bound for a collection $\left\{E_{\alpha}\right\}_{\alpha\in A}$, with inclusion relation within this collection. We form $\cup_{\alpha\in A}E_{\alpha}$ and we want to establish a well-ordering on it. First, we need a linear ordering, say if $x,y\in \cup_{\alpha\in A}E_{\alpha}$, then there exists an $E_{\alpha}$ such that $x\in E_{\alpha}$ and an $E_{\beta}$ such that $y\in E_{\beta}$. Then because $E_{\alpha}$ and $E_{\beta}$ has inclusion relation, say $E_{\alpha}\subset E_{\beta}$, then $x\le_{\beta} y$ or $y\le_{\beta} x$. And we want a minimum element. Since we have inclusion relation and compatible ordering in the collection, they share a common minimal element. A case which makes me worried is when $\cap_{\alpha\in A}E_{\alpha}=\emptyset$. For example, $([-\frac{1}{n},\frac{1}{n}[)_{n\ge 1}$. So to make it an upper bound, we need to define another subset $\cup_{\alpha\in A}E_{\alpha}\cup\left\{x_0\right\},x_0\in X\backslash \cup_{\alpha\in A}E_{\alpha}\cup\left\{x_0\right\}$. and we define $x_0\le x$, for all $x\in \cup_{\alpha\in A}E_{\alpha}$, then $x_0$ is a minimal element and $\cup_{\alpha\in A}E_{\alpha}\cup\left\{x_0\right\}$ is well-ordered. When $\cup_{\alpha\in A}E_{\alpha}=X$, then what?
+
+Ok, I know why I did not succeed in all the way above? I want to use a too strong partial ordering on $\mathcal{W}$, while this makes the Zorn's lemma less powerful. What I need is really some “partial” ordering. We only need to restrict the order only to subsets of $\mathcal{W}$ for which the union of its elements does not equal to $X$.
+
+So I may ask does a partial ordering remains a partial ordering on this set when we restrict it to be true only on a subset of this set. Though the intuition is strong, to safely landing, we still carefully check that $\subset$ remains a partially oredering on the subsets of $\mathcal{W}$ whose elements' union isn't $X$. If $M=\left\{E_{\alpha}\right\}_{\alpha\in A},N=\left\{E_{\beta}\right\}_{\beta\in B},O=\left\{E_{\gamma}\right\}_{\gamma\in C}$ are three such sets with $M\subset N,N\subset O$, of course $M\subset O$. And if $M\subset N$ and $N\subset M$, $M=N$. And $M\subset M$.

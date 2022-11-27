@@ -1,0 +1,55 @@
+\section{Treatment of signal}
+The first strange thing that I met is the Heaviside function, it's a function defind in a complex way though its graph is rather simple:
+$$
+U(t)=\int_{-\infty}^{t}\delta(u)du
+$$
+
+It is said that when we take the convolution of a signal with the dirac distribution, the signal will be retarded. Can we justify this from the definition of the convolution product?
+$$
+x(t)*\delta(t-t_0)=\int du x(u)\delta (t-t_0-u)\overset{\delta(-x)=\delta(x)}{=}\int du x(u)\delta (u-(t-t_0))=x(t-t_0)
+$$
+
+I have seen that $TF\left[\pi_T(t)\right]=\frac{\sin(\pi fT)}{\pi f}$ and $TF\left[\frac{\sin(\pi Ft)}{\pi t}\right]=\Pi_{F}(f)$, there are two symbols for which I don't know their exact expressions. I try to figure it out by make the Fourier Transform in explicit, say
+$$
+\begin{aligned}
+\Pi_{F}(f)&=TF\left[\frac{\sin(\pi Ft)}{\pi t}\right]\\
+&=\int dte^{-i2\pi ft}\frac{\sin(\pi Ft)}{\pi t}
+\end{aligned}
+$$
+But it does not look like any function I have ever met, for which I will simply treat it as a special function.
+
+I always think of the Fourier decomposition as a consequence of the Fourier transform on the periodics functions, but today I realized that this is a somewhat silly thinking! Since When we perform a Fourier transform on a function in time domain, it is no longer a function in time domain, but a function in frequency domain. However, when we do the Fourier decomposition, we stay in the time domain. Nonetheless, the Fourier tranform of the periodic functions still have the special form which is directly due to the Fourier decomposition:
+$$
+\begin{aligned}
+X(f)&=TF\left[x(t)\right]\\
+&=\sum_{n=-\infty}^{+\infty}C_n TF[e^{j2\pi nF t}],F=\frac{1}{T}\\
+&=\sum_{n=-\infty}^{+\infty}C_n\delta(f-nF)
+\end{aligned}
+$$
+
+It is said that if we want to make a signal periodic, we need to take the convolution product of it with a so-called comb of Dirac, which is defined by $\sum_{k=-\infty}^{+\infty}\delta(t-kT)$. In this way, as we have said, we can retard the signal with different distance. But a natural problem is: Will this cause some overlap, if the signal is long compared to the short translation distance? What effects will this overlap have?
+
+As well, there will be overlap of spectrum. But this appears in the sampling. We know that sampling can be achieved by multiplying the signal with a comb of Dirac while the question is: Do we need to be careful about pitch of teeth of the comb? The problem of arbitrarily choosing the pitch will be revealed when we pass to the frequency domain. The question here is that I don't understand what does the symbol $F_M$ means? Where does it comes from? How can a signal becomes a triangle symmetric with respect to the origin after the Fourier transform?
+
+
+The reconstruction process is confusing and the special functions $\pi_T$ and $\Pi_F$ recur, which makes the situation worse.
+
+When the signal only lasts finite time, we say that the signal is of finite energy. But we have another type of signal, which is the signal of finite mean power. Does these two types of signal exclusives? The definition of the average power of signal is:
+$$
+P_x=\lim_{\theta\longrightarrow \infty}\frac{1}{\theta}\int_{-\frac{\theta}{2}}^{\frac{\theta}{2}}|x(t)|^2dt
+$$
+and the $\theta$ is said to be observation time. Why do we need to distinguish these two type when we consider correlation? What is the physical meaning of correlation? From my point of view they are the convolution product of two signals in the time domain and consequently a simple product of their spectrum in the frequency domain.
+
+Also there is an important notion, namely, the spectral density of power: $DSE=TF[C_x(\tau)]$, say, the Fourier transform of its self convolution. And for reasons to be find, we use different symbols for this same physical quantity:
+$$
+c_x(f)=|X(f)|^2,\gamma_x(f)=TF[\Gamma_x(\tau)]=\lim_{\theta\to \infty}\frac{|X_{\theta}(f)|^2}{\theta}
+$$
+How can we get these expressions? Also the spectral density of power will appears in the study of filtration, where we are interested in find the relation of the spectral density of power between the original signal and the signal after filtering: $\gamma_y(f)=|H(f)|^2\gamma_{x}(f)$. How can we derive this?
+
+
+
+
+
+
+
+

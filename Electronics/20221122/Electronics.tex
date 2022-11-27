@@ -1,0 +1,23 @@
+\documentclass{article}
+\author{Qi Meng}
+\def\ndates {11.22}
+\def\nyear {2022}
+\def\ncourse {Electronics}
+\def\myedition {1}
+\input{header}
+%\includeonly{}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\input{sec6}
+\input{sec5}
+\input{sec4}
+\input{sec3}
+\input{sec2}
+\input{sec1}
+\printindex
+\nocite{*}
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{citation} % Entries are in the citation.bib file
+\end{document}

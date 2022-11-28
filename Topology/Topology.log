@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  28 NOV 2022 20:33
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  28 NOV 2022 20:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Quantum_Mechanics.tex
-(./Quantum_Mechanics.tex
+**Topology.tex
+(./Topology.tex
 LaTeX2e <2022-06-01> patch level 5
 L3 programming layer <2022-07-15>
 (c:/texlive/2022/texmf-dist/tex/latex/base/article.cls
@@ -1425,11 +1425,11 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \colbreak@box=\box153
 \mc@col@check@num=\count389
 ))
-\Quantum_Mechanics@idxfile=\write6
-\openout6 = `Quantum_Mechanics.idx'.
+\Topology@idxfile=\write6
+\openout6 = `Topology.idx'.
 
 
-Writing index file Quantum_Mechanics.idx
+Writing index file Topology.idx
 (c:/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -1598,9 +1598,8 @@ Package: import 2020/04/01  v 6.2
 )
 Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 9.
-
-(./Quantum_Mechanics.aux)
-\openout1 = `Quantum_Mechanics.aux'.
+ (./Topology.aux)
+\openout1 = `Topology.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -1613,7 +1612,8 @@ LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 9
 .
- (c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
+
+(c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 9.
@@ -1651,6 +1651,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 
 Package chemgreek Info: Activating mapping `default' on line 9.
+
 
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.18} (current compat level: 1.12).
@@ -1699,9 +1700,9 @@ or `english'. on input line 9.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 9.
-(./Quantum_Mechanics.out) (./Quantum_Mechanics.out)
+(./Topology.out) (./Topology.out)
 \@outlinefile=\write7
-\openout7 = `Quantum_Mechanics.out'.
+\openout7 = `Topology.out'.
 
 LaTeX Font Info:    Trying to load font information for OT1+cmbr on input line 
 11.
@@ -1751,36 +1752,35 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
 LaTeX Font Warning: Font shape `TU/cmbr/b/n' undefined
 (Font)              using `TU/cmbr/m/n' instead on input line 11.
 
-(./Quantum_Mechanics.toc)
+(./Topology.toc)
 \tf@toc=\write8
-\openout8 = `Quantum_Mechanics.toc'.
+\openout8 = `Topology.toc'.
 
  [1
 
-] (./sec1.tex) [2] [3]
-runsystem(makeindex Quantum_Mechanics.idx)...executed safely (allowed).
+] (./sec1.tex) [2]
+runsystem(makeindex Topology.idx)...executed safely (allowed).
 
- (./Quantum_Mechanics.ind)
-(./Quantum_Mechanics.bbl
+ (./Topology.ind) (./Topology.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [4
+) [3
 
-] (./Quantum_Mechanics.aux)
+] (./Topology.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `Quantum_Mechanics.out' has not changed.
-(rerunfilecheck)             Checksum: EBCA3862F37481645BE8CDD68DEBED72;139.
+Package rerunfilecheck Info: File `Topology.out' has not changed.
+(rerunfilecheck)             Checksum: 7B6A360D5BEE2DC3830AAA1CDFE9759E;146.
  ) 
 Here is how much of TeX's memory you used:
  52944 strings out of 475865
- 1228870 string characters out of 5805584
- 1695308 words of memory out of 5000000
+ 1228591 string characters out of 5805584
+ 1683015 words of memory out of 5000000
  73025 multiletter control sequences out of 15000+600000
  483112 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,7n,97p,1198b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,6n,97p,1189b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Quantum_Mechanics.pdf (4 pages).
+Output written on Topology.pdf (3 pages).

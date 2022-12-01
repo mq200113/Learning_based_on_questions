@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  28 NOV 2022 20:33
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.24)  1 DEC 2022 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1757,30 +1757,48 @@ LaTeX Font Warning: Font shape `TU/cmbr/b/n' undefined
 
  [1
 
-] (./sec1.tex) [2] [3]
+] (./sec2.tex) (./sec1.tex [2]
+
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 59.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 67.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 67.
+
+[3]
+Overfull \hbox (2.17593pt too wide) in paragraph at lines 81--81
+|[]\TU/cmbr/b/n/14.4 Oscillation and regeneration in neutrinos and neutral K-me
+sons
+ []
+
+) [4]
 runsystem(makeindex Quantum_Mechanics.idx)...executed safely (allowed).
 
- (./Quantum_Mechanics.ind)
-(./Quantum_Mechanics.bbl
+ (./Quantum_Mechanics.ind) (./Quantum_Mechanics.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [4
+) [5
 
 ] (./Quantum_Mechanics.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `Quantum_Mechanics.out' has not changed.
-(rerunfilecheck)             Checksum: EBCA3862F37481645BE8CDD68DEBED72;139.
+(rerunfilecheck)             Checksum: 7761DC9CEB7A2332DA3371DD4A476829;1070.
  ) 
 Here is how much of TeX's memory you used:
- 52944 strings out of 475865
- 1228870 string characters out of 5805584
- 1695308 words of memory out of 5000000
- 73025 multiletter control sequences out of 15000+600000
- 483112 words of font info for 98 fonts, out of 8000000 for 9000
+ 52989 strings out of 475865
+ 1229763 string characters out of 5805584
+ 1701298 words of memory out of 5000000
+ 73062 multiletter control sequences out of 15000+600000
+ 486183 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 104i,7n,97p,1198b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,9n,97p,1198b,778s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Quantum_Mechanics.pdf (4 pages).
+Output written on Quantum_Mechanics.pdf (5 pages).

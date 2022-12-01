@@ -1,0 +1,39 @@
+\section{Coherent states}
+What does a semiclassical state means?
+
+Calculation work: $D(\alpha)=e^{-\frac{1}{2}|\alpha|^2}e^{\alpha a^{\dagger}}e^{\beta a}$. $D(\alpha)D^{\dagger}(\alpha)=1$. Take $\alpha$ and $\beta$ to be infintesimal, and expand the exponential in $D(\alpha)=e^{-\frac{1}{2}|\alpha|^2}e^{\alpha a^{\dagger}}e^{\beta a}$. Prove that when keeping only the linear terms,
+$$
+(1+\alpha\alpha^{\dagger}+\beta\alpha+\alpha^{*}a+\beta^{*}a^{\dagger})=1
+$$
+$$
+\begin{aligned}
+e^{-\frac{1}{2}|\alpha|^2}e^{\alpha a^{\dagger}}e^{\beta a}&\simeq 1.(1+\alpha a^{\dagger})(1+\beta a)\\
+&\simeq 1+\alpha a^{\dagger}+\beta a 
+\end{aligned}
+$$
+$$
+(1+\alpha a^{\dagger}+\beta a )(1+\alpha^{*} a+\beta^{*} a^{\dagger} )\simeq 1+\alpha a^{\dagger}+\beta a+\alpha^{*} a+\beta^{*} a^{\dagger}
+$$
+
+Show that $D(\alpha e^{-i\omega t})\bket{0}=e^{-\frac{1}{2}|\alpha|^2}\exp[\alpha a^{\dagger}e^{-i\omega t}]\bket{0}$.
+$$
+\begin{aligned}
+D(\alpha e^{-i\omega t})\bket{0}&=e^{-\frac{1}{2}|\alpha|^2}\exp[\alpha a^{\dagger}e^{-i\omega t}]\exp[-\alpha^{*}e^{i\omega t}a]\bket{0}\\
+&=e^{-\frac{1}{2}|\alpha|^2}\exp[\alpha a^{\dagger}e^{-i\omega t}]\bket{0} (\text{ since }e^{\beta a}\bket{0}=\bket{0}, \beta =-\alpha^{*}e^{i\omega t})
+\end{aligned}
+$$
+
+
+Show that $$
+\brak{x}e^{\frac{i}{\hbar}(p_0X-x_0P)}\bket{0}=e^{\frac{i}{\hbar}p_0x}\psi_0(x-x_0,0)
+$$
+$$
+\begin{aligned}
+\brak{x}e^{\frac{i}{\hbar}(p_0X-x_0P)}&=\brak{x}e^{\frac{i}{\hbar}p_0X}e^{-\frac{i}{\hbar}x_0P}e^{-\frac{1}{2}[\frac{i}{\hbar}p_0X,-\frac{i}{\hbar}x_0P]}\\
+&=\brak{x}e^{\frac{i}{\hbar}p_0X}e^{-\frac{i}{\hbar}x_0P}e^{-\frac{1}{2}x_0p_0(\frac{i}{\hbar})(-\frac{i}{\hbar})(i\hbar)}\\
+&=\brak{x}e^{\frac{i}{\hbar}p_0X}e^{-\frac{i}{\hbar}x_0P}e^{-\frac{i}{\hbar}p_0\frac{x_0}{2}}\\
+&=e^{\frac{i}{\hbar}p_0(x-\frac{x_0}{2})}\brak{x}e^{-\frac{i}{\hbar}x_0P}\\
+&=e^{\frac{i}{\hbar}p_0(x-\frac{x_0}{2})}\brak{x}(e^{-\frac{i}{\hbar}(-x_0)P})^{\dagger}\\
+&=e^{\frac{i}{\hbar}p_0(x-\frac{x_0}{2})}\brak{x-x_0}
+\end{aligned}
+$$

@@ -1,0 +1,51 @@
+\section{Making second quantization work}
+Why there is a minus in
+$$
+\hat{H}=\sum_{ij}(-t_{ij})\hat{c_i}^{\dagger}\hat{c_j}
+$$
+
+I think I am still not very accustomed to the second quantization. And I can't tell the relation between writing an operator in terms of second quantization and in terms of field operators, and what is their separate lien with momentum and position?
+
+A calculation work: The Hamiltonian for the Hubbard model is
+$$
+\hat{H}=\sum_{ij\sigma}(-t_{ij})\hat{c_{i\sigma}}^{\dagger}\hat{c_{j\sigma}}+U\sum_i\hat{n_{i\uparrow}}\hat{n_{i\downarrow}}
+$$
+and we write a general state as $\bket{\psi}=a\bket{\uparrow\downarrow,0}+b\bket{\uparrow,\downarrow}+c\bket{\downarrow,\uparrow}+d\bket{0,\uparrow\downarrow}$ and prove that in this basis the Hubbard Hamiltonian is
+$$
+\hat{H}=\begin{pmatrix}
+U&-t&-t&0\\
+-t&0&0&-t\\
+-t&0&0&-t\\
+0&-t&-t&U
+\end{pmatrix}
+$$
+
+We calculate $\hat{H}\bket{\uparrow\downarrow,0}$
+$$
+\begin{aligned}
+\hat{H}\bket{\uparrow\downarrow,0}&=(-t_{11})\hat{c_{1\sigma}}^{\dagger}\hat{c_{1\sigma}}\bket{\uparrow\downarrow,0}+(-t_{21})\hat{c_{2\sigma}}^{\dagger}\hat{c_{1\sigma}}\bket{\uparrow\downarrow,0}+U\hat{n_{1\uparrow}}\hat{n_{1\downarrow}}\bket{\uparrow\downarrow,0}\bket{\uparrow\downarrow,0}\\
+&={\color{red}?}+U.1.1\bket{\uparrow\downarrow,0}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+(-t_{21})\hat{c_{2\uparrow}}^{\dagger}\hat{c_{1\uparrow}}\bket{\uparrow\downarrow,0}&=(-t_{21})((-1)^{n_0=0}\sqrt{1})\hat{c_{2\uparrow}}^{\dagger}\bket{\downarrow,0}\\
+&=(-t_{21})((-1)^{0}\sqrt{1})((-1)^0\sqrt{1-0})\bket{\downarrow,\uparrow}\\
+&=(-t_{21})\bket{\downarrow,\uparrow}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+	(-t_{11})\hat{c_{1\uparrow}}^{\dagger}\hat{c_{1\uparrow}}\bket{\uparrow\downarrow,0}&=(-t_{11})((-1)^{0}\sqrt{1})\hat{c_{1\uparrow}}^{\dagger}\bket{\downarrow,0}\\
+	&=(-t_{11})((-1)^{0}\sqrt{1})((-1)^{0}\sqrt{1-0})\bket{\uparrow\downarrow,0}\\
+	&=(-t_{11})\bket{\uparrow\downarrow,0}
+\end{aligned}
+$$
+$$
+\begin{aligned}
+	(-t_{11})\hat{c_{1\downarrow}}^{\dagger}\hat{c_{1\downarrow}}\bket{\uparrow\downarrow,0}&=(-t_{11})((-1)^{n_{2-1}=n_1=1}\sqrt{1})\hat{c_{1\downarrow}}^{\dagger}\bket{\uparrow,0}\\
+	&=(-t_{11})((-1)^{n_{2-1}=n_1=1}\sqrt{1})((-1)^{n_{2-1}=n_1=1}\sqrt{1-0})\bket{\uparrow\downarrow,0}\\
+	&=(-t_{11})\bket{\uparrow\downarrow,0}
+\end{aligned}
+$$
+But $t_{11}=0$, so we don't keep these terms in our final result.

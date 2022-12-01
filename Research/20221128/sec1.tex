@@ -1,0 +1,100 @@
+\section{Canonical momentum, spin, and orbital angular momentum of elastic waves}
+It is easily accepted that $T=\frac{1}{2}\rho\dot{\boldsymbol{a}}^2$ represented the density of kinetic energy.
+
+$$
+W\overset{?}{=}\piandao{\mathcal{L}}{\dot{\boldsymbol{a}}}\cdot \dot{\boldsymbol{a}}-\mathcal{L}=\rho\dot{\boldsymbol{a}}\cdot \dot{\boldsymbol{a}}-\frac{1}{2}\rho\dot{\boldsymbol{a}}^2+U=T+U
+$$
+$$
+\boldsymbol{P}\overset{?}{=}-\piandao{\mathcal{L}}{\dot{\boldsymbol{a}}}\cdot (\nabla)\boldsymbol{a}=-\rho \boldsymbol{v}\cdot (\nabla)\boldsymbol{a}
+$$
+$$
+\boldsymbol{J}\overset{?}{=}-\piandao{\mathcal{L}}{\dot{\boldsymbol{a}}}\cdot (\boldsymbol{r}\times \nabla)\boldsymbol{a}-\piandao{\mathcal{L}}{\dot{\boldsymbol{a}}}\times \boldsymbol{a}\equiv \boldsymbol{L}+\boldsymbol{S}
+$$
+where
+$$
+\boldsymbol{L}=\boldsymbol{r}\times \boldsymbol{P},\boldsymbol{S}=-\rho\boldsymbol{v}\times \boldsymbol{a}
+$$
+
+These are all said to be consequences of the Nother's theorem, but how?
+
+Why elastic waves can have both longitudinal and transverse contributions:
+$$
+\boldsymbol{a}=\boldsymbol{a}_{L}+\boldsymbol{a}_{T},\nabla\times \boldsymbol{a}_L=\boldsymbol{0},\nabla\cdot\boldsymbol{a}_{T}=0
+$$
+
+
+$$
+\boldsymbol{a}(\boldsymbol{r},t)=\Re[\boldsymbol{a}(\boldsymbol{r})e^{-i\omega t}],\boldsymbol{v}(\boldsymbol{r},t)=\Re[\boldsymbol{v}(\boldsymbol{r})e^{-i\omega t}],\boldsymbol{v}\overset{?}{=}-i\omega\boldsymbol{a}
+$$
+
+Prove that 
+$$
+\bar{\boldsymbol{P}}=\frac{\rho\omega}{2}\Im [\boldsymbol{a}^{*}\cdot (\nabla) \boldsymbol{a}]
+$$
+$$
+\begin{aligned}
+P_j&=-\rho (v_i\partial_i)a_j\\
+&=-\rho (\partial_t\Re[a_i(\boldsymbol{r})e^{-i\omega t}]\partial_i \Re[a_j(\boldsymbol{r})e^{-i\omega t}])\\
+&=-\rho (\Re(-i\omega a_i(\boldsymbol{r})e^{-i\omega t})\Re[\partial_ia_j(\boldsymbol{r})e^{-i\omega t}])\\
+&=-\rho \frac{-i\omega a_i(\boldsymbol{r})e^{-i\omega t}+i\omega a_i^{*}(\boldsymbol{r})e^{i\omega t}}{2}.\frac{\partial_ia_j(\boldsymbol{r})e^{-i\omega t}+\partial_ia_j^{*}(\boldsymbol{r})e^{i\omega t}}{2}\\
+&=\frac{\rho\omega}{4}i\left(a_i(\boldsymbol{r})\partial_ia_j^{*}(\boldsymbol{r})-a_{i}^{*}(\boldsymbol{r})\partial_{i}a_{j}(\boldsymbol{r})\right)\\
+&=-\frac{\rho\omega}{4}i\left(a_{i}^{*}(\boldsymbol{r})\partial_{i}a_{j}(\boldsymbol{r})-(a_{i}^{*}(\boldsymbol{r})\partial_{i}a_{j}(\boldsymbol{r}))^{*}\right)\\
+&=-\frac{\rho\omega}{4}i(2i\Im[a_{i}^{*}(\boldsymbol{r})\partial_{i}a_{j}(\boldsymbol{r})])\\
+&=\frac{\rho\omega}{2}\Im[a_{i}^{*}(\boldsymbol{r})\partial_{i}a_{j}(\boldsymbol{r})]
+\end{aligned}
+$$
+
+Why $\bar{\boldsymbol{P}}$ resemble local expectation values of quantum-mechanical momentum $(-i\nabla)$ operator with the “wave function” $\boldsymbol{\psi}=\sqrt{\frac{\rho\omega}{2}}\boldsymbol{a}$, $\boldsymbol{\psi}^{*}\cdot \boldsymbol{\psi}=2\bar{T}/\omega$? First, let's check that $\boldsymbol{\psi}^{*}\cdot \boldsymbol{\psi}=2\bar{T}/\omega$. $\boldsymbol{\psi}^{*}\cdot \boldsymbol{\psi}=\frac{\rho\omega}{2}|\boldsymbol{a}|^2=\frac{2}{\omega}\frac{\rho\omega^2}{4}|\boldsymbol{a}|^2=2\bar{T}/\omega$. According to my memory, the expectation value should be $\boldsymbol{\psi}^{*}\cdot(-i\nabla)\boldsymbol{\psi}=\frac{\rho\omega}{2}\boldsymbol{a}^{*}\cdot (-i\nabla)\boldsymbol{a}\overset{?}{=}\bar{\boldsymbol{P}}$, so how to understand this inconformity?
+
+
+I think I have done something wrong, $$
+\boldsymbol{a}^{*}\cdot (\nabla)\boldsymbol{a}=(\boldsymbol{a}^{*}\cdot \nabla)\boldsymbol{a}+\boldsymbol{a}^{*}\times (\nabla\times \boldsymbol{a})
+$$
+
+So I have to additionally calculate
+$$
+\begin{aligned}
+(\boldsymbol{v}\times (\nabla\times \boldsymbol{a}))_i&=\varepsilon_{ijk}v_j(\nabla\times \boldsymbol{a})_k\\
+&=\varepsilon_{ijk}v_j\varepsilon_{kmn}\partial_{m}a_n\\
+&=\varepsilon_{ijk}\varepsilon_{mnk}v_j\partial_{m}a_n\\
+&=(\delta_{im}\delta_{jn}-\delta_{in}\delta_{jm})v_j\partial_{m}a_n\\
+&=v_j(\partial_{i}a_j-\partial_ja_i)\\
+&=\frac{-i\omega a_j(\boldsymbol{r})e^{-i\omega t}+i\omega a_j^{*}(\boldsymbol{r})e^{i\omega t}}{2}.\\
+&\left(\frac{\partial_ia_j(\boldsymbol{r})e^{-i\omega t}+\partial_ia_j^{*}(\boldsymbol{r})e^{i\omega t}}{2}-\frac{\partial_ja_i(\boldsymbol{r})e^{-i\omega t}+\partial_ja_i^{*}(\boldsymbol{r})e^{i\omega t}}{2}\right)\\
+&=\frac{1}{4}i\omega\left(-a_j\partial_ia_j^{*}+a^{*}_{j}\partial_ia_j+a_j\partial_ja_i^{*}-a_j^{*}\partial_ja_i\right)\\
+&=\frac{1}{4}i\omega\left(2i\Im[a^{*}_{j}\partial_ia_j]-2i\Im[a_j^{*}\partial_ja_i]\right)\\
+&=\frac{\omega}{2}\Im[a_{j}^{*}(\partial_ja_i-\partial_ia_j)]\\
+&=-\frac{\omega}{2}\Im[\boldsymbol{a}^{*}\times(\nabla\times \boldsymbol{a})]
+\end{aligned}
+$$
+\section{Momentum and angular momentum of cylindrical modes}
+Why the cylindrical field has the form
+$$
+\boldsymbol{a}=[a_r(r),a_{\varphi}(r),a_z(r)]e^{i\ell\varphi+ik_zz},
+$$
+where $k_z$ the longitude wave number, and $\ell$ is the integer azimuthal quantum number? Normally, I don't expect that we have quantum number in a wave problem, why here?
+
+Why use the Cartesian components while change to the associated basis of circular polarizations in the $(x,y)$-plane: $a^{\pm}=[(a_x\mp ia_y)/\sqrt{2}]=[(a_r\mp ia_{\varphi})/\sqrt{2}]e^{\mp i\varphi}$?
+
+Prove that $\frac{\bar{P_z}}{2\bar{T}}=\frac{k_z}{\omega}$.
+$$
+\begin{aligned}
+\bar{P_z}&=\frac{\rho\omega}{2}\Im[a_r^{*}\partial_ra_z(r)e^{i\ell \varphi+ik_zz}+a_{\varphi}^{*}\frac{1}{r}\partial_{\varphi}a_z(r)e^{i\ell \varphi+ik_zz}+a_z^{*}\partial_za_z(r)e^{i\ell \varphi+ik_zz}]\\
+&=\frac{\rho\omega}{2}\Im[a_r^{*}(r)\partial_ra_z(r)+(i\ell)a_{\varphi}^{*}(r)\frac{1}{r}a_z(r)+(ik_z)|a_z|^{2}]\\
+&=\frac{\rho\omega}{2}[k_z|a_z|^2+{\color{red}?}]
+\end{aligned}
+$$
+We have more terms:
+$$
+\begin{aligned}
+\Im[a_{j}^{*}(\partial_za_j-\partial_ja_z)]&=\Im[a_{r}^{*}(\partial_z a_r-\partial_r a_z)+a_{\varphi}^{*}(\partial_z a_{\varphi}-\frac{1}{r}\partial_\varphi a_z)+a_{z}^{*}(\partial_z a_z-\partial_z a_z)]\\
+&=\Im[a_{r}^{*}(\partial_z a_r-\partial_r a_z)+a_{\varphi}^{*}(\partial_z a_{\varphi}-\frac{1}{r}\partial_\varphi a_z)]\\
+&=\Im[(ik_z)|a_r|^2-a^{*}_{r}\partial_ra_z+(ik_z)|a_{\varphi}|^2-(i\ell)a_{\varphi}^{*}\frac{1}{r}a_z]
+\end{aligned}
+$$
+Now we get the desired result!
+
+How to change the field in the representation of the circular Cartesian basis?
+
+\section{Transverse spin of a Reyleigh wave}
+How to derive the field of Rayleigh wave propagating along the $z$ axis and the $x=0$ surface of an isotropic medium $(x<0)$?
